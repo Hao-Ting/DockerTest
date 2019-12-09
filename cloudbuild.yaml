@@ -17,7 +17,7 @@ steps:
 # This step runs the unit tests on the app
 
 - name: 'ubuntu'
-  args: ['bash', '-c', 'date -u +%Y%m%dT%H%M_$SHORT_SHA > _TAG']
+  args: ['date', '-u', '+%Y%m%dT%H%M_$SHORT_SHA > _TAG']
 
 - name: 'python:3.7-slim'
   id: Test
